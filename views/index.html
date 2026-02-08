@@ -1,26 +1,27 @@
-<!doctype html>
-<html lang="en">
-  <head>
-      <meta charset="utf-8">
-      <meta name="description" content="alphasec">
-      <meta name="author" content="alphasec">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>alphasec</title>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-      <link rel="stylesheet" href="/css/styles.css">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:500&display=swap">
-      <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-    <div class="row">
-      <h1 class="h1">alphasec</h1>
-    </div>
-    <div class="row">
-      <div>
-      </div>
-    </div>
-    <div class="row">
-      <span class="text-muted small">alphasec © 2024. All rights reserved.</span>
-    </div>
-  </body>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+    <script>
+        window.onload = function() {
+            // 1. Get the code/token from the URL parameters
+            const params = window.location.search;
+            
+            // 2. Build the deep link to your app
+            // USE YOUR PREVIEW/DEV CLIENT ID HERE dynamically if possible, or hardcode for test
+            const scheme = "com.googleusercontent.apps.971453892646-5659vrpbhpbs831vs8ub9lc21h81ql70"; 
+            const appUrl = scheme + ":/oauth2redirect/google" + params;
+
+            // 3. Force the browser to open the app
+            window.location.href = appUrl;
+            
+            // Fallback link in case auto-redirect fails
+            document.getElementById("link").href = appUrl;
+        };
+    </script>
+</head>
+<body>
+    <p>Redirecting to ServeMate...</p>
+    <a id="link" href="#">Click here if not redirected</a>
+</body>
 </html>
